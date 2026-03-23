@@ -49,7 +49,7 @@ console.log(person.Iname, person.address.street);
 const {address, address:{housnumber}} = person;
 console.log(address, housnumber);
 
-console.log(JSON.stringify(person));
+console.log(JSON.stringify(person)); //JSON.stringify objet arry stringga ozgartiradi
 
 
 const ustun = [
@@ -59,7 +59,7 @@ const ustun = [
         ustun:false,
     },
        {
-        Ename:"Tanjiro",
+        Ename:"Zenutsu",
         Eage: 16,
         ustun:false,
     },
@@ -76,3 +76,100 @@ const ustun = [
 ]
 
 console.log(ustun.length);
+
+// For loop
+
+// for(i=0; i<=ustun.length; i++){
+//     console.log(i);
+//     console.log(ustun[i].Ename);
+    
+// }
+
+// Else if
+
+let y = null;
+let x = false;
+ 
+if (x === y) {
+    console.log("TRUE");
+    
+}else{
+    console.log("FALSE");
+    
+}
+
+// AND -> &&    ikklasi ham  TRUE = TRUE bolishi kerak
+// OR -> ||    iktasiadan biri  TRUE = FALSE bolsa ishalydi
+
+let socer = 56;
+
+if(socer >= 90){
+    console.log("A");
+    
+}else if(socer < 90 && socer >= 80 ){
+    console.log("B");
+    
+}else if(socer < 80 && socer >= 70 ){
+    console.log("C");
+    
+}else if(socer < 70 && socer >= 60 ){
+    console.log("D");
+    
+}else{
+    console.log("CHich vording");
+    
+}
+
+let coin = 70;
+
+let money =  coin > 80 ? "BOR" : "YOQ";
+console.log(money);
+
+//Switch case
+
+function greet(time) {
+    switch (time) {
+        case "Tong":
+                console.log("ertlab");
+                 break;
+        case "Abet":
+            console.log("Abet");
+                 break;
+        case "kecki":
+            console.log("kechki ovaqat");
+                break
+    }
+}
+greet("kechki");
+
+//
+
+let students = [
+    {
+        Iname: "Luffy",
+        age:19,
+        king:true
+    },
+    {
+        Iname: "Low",
+        age:21,
+        king:true
+    },
+    {
+        Iname: "Nami",
+        age:19,
+        king:false,
+    }
+]
+
+// filter -> kerakliylarni chiqaradi
+// map -> aytilganlarni chiqaradi
+
+const king = students.filter(students=> {
+    return students.king === false;
+}).map(s =>{
+   return s.Iname
+})
+console.log(king);
+console.log(students);
+
