@@ -48,24 +48,24 @@
 //     })
 // })
 
-const main = document.querySelector('main')
-const button = document.querySelector('button')
+// const main = document.querySelector('main')
+// const button = document.querySelector('button')
 
-button.addEventListener('click', ()=>{
-    // main.innerHTML += '<div>Contir oynanazimi gomi 🔫</div>'
-    const div = document.createElement('div')
-    div.textContent = 'ontir oynanazimi🔫'
-    main.prepend(div)
+// button.addEventListener('click', ()=>{
+//     // main.innerHTML += '<div>Contir oynanazimi gomi 🔫</div>'
+//     const div = document.createElement('div')
+//     div.textContent = 'ontir oynanazimi🔫'
+//     main.prepend(div)
     
-})
+// })
 
-main.addEventListener('click', (e)=>{
-    if(e.target.nodeName == 'DIV'){
-        e.target.remove()
-    }
+// main.addEventListener('click', (e)=>{
+//     if(e.target.nodeName == 'DIV'){
+//         e.target.remove()
+//     }
     
-}
-)
+// }
+// )
 // const li = document.querySelectorAll('div');
 // li.forEach((item)=>{
 //     item.addEventListener('click', (e)=>{
@@ -76,5 +76,15 @@ main.addEventListener('click', (e)=>{
 // })
 // main.addEventListener('click',()=>{
 //     console.log("main");
+    
+// })
+
+
+
+// document.addEventListener('keyup', (e)=>{
+//     if( e.key == 's' && e.ctrlKey){
+//         console.log("gooo");
+        
+//     }
     
 // })
