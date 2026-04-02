@@ -26,31 +26,45 @@
 // console.log(data,moth,years,menut);
 
 
-const ustun = [
-    {
-        Ename:"Tanjiro",
-        Eage: 16,
-        ustun:false,
-    },
-       {
-        Ename:"Zenutsu",
-        Eage: 16,
-        ustun:false,
-    },
-       {
-        Ename:"Tanjiro",
-        Eage: 16,
-        ustun:false,
-    },
-       {
-        Ename:"Tanjiro",
-        Eage: 16,
-        ustun:false,
-    },
-]
+// const ustun = [
+//     {
+//         Ename:"Tanjiro",
+//         Eage: 16,
+//         ustun:false,
+//     },
+//        {
+//         Ename:"Zenutsu",
+//         Eage: 16,
+//         ustun:false,
+//     },
+//        {
+//         Ename:"Tanjiro",
+//         Eage: 16,
+//         ustun:false,
+//     },
+//        {
+//         Ename:"Tanjiro",
+//         Eage: 16,
+//         ustun:false,
+//     },
+// ]
 
 
-const [a,s,...d]= [...ustun]
-console.log(ustun);
-console.log(a,s,d);
+// const [a,s,...d]= [...ustun]
+// console.log(ustun);
+// console.log(a,s,d);
 
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data);
+//   });
+
+  fetch("https://jsonplaceholder.typicode.com/users")
+  .then(response=>response.json())
+  .then(data=>{
+    console.log(data);
+    
+  })
