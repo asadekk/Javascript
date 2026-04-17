@@ -139,3 +139,171 @@
 // const arr = [5, 12, 8, 130, 44];
 // const arrM = arr.findIndex(x => x > 40); 
 // console.log(arrM);
+
+//  Iteratsiya Metodlar
+
+//ForEach()-— Har bir elementga amal bajarish
+//Har bir element uchun callback funksiyani chaqiradi. Hech narsa qaytarmaydi (undefined).
+
+// const arr = ['olma', 'banan', 'nok'];
+// const count = arr.forEach((elemnet,index,array)=>{
+// console.log(index,elemnet,array);
+
+// })
+
+//map() — Yangi massiv yaratish
+//Har bir element uchun funksiya bajarib, natijalardan yangi massiv qaytaradi. Asl massiv o'zgarmaydi
+
+// const arr = [1,2,3,4,5,6,7,8,9,10];
+// const sum = arr.map( n => n * 2);
+// console.log(sum);
+
+// const users = [{name:'Asta'},{name:'Luffy'},{name:"Kirito"},{name:'Asadbek'}]
+// const m = users.map(n => n.name.toLocaleUpperCase())
+// console.log(m);
+
+// filter() — Filtrlash
+// Shartga mos elementlardan yangi massiv yaratadi
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// const count = numbers.filter(n => n % 2 === 0)
+// console.log(count);
+
+// const users = [{name:'Asta',age:15},{name:'Luffy',age:17},{name:"Kirito",age:18},{name:'Asadbek',age:16}];
+// const ageU = users.filter(n => n.age >= 18)
+// console.log(ageU);
+
+//reduce() — Bitta qiymatga kamaytirish
+//Massivni bitta qiymatga (son, string, ob'ekt) kamaytiradi. Eng kuchli iteratsiya metodlaridan biri
+
+
+// const numbers = [ 1,2,3,4,5];
+// // Yig'indisi
+// const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+// console.log(sum); 
+
+// const product = numbers.reduce((acc, cur) => acc * cur, 1);
+// console.log(product);
+
+// const arr = ['a', 'b', 'c'];
+// const obj = arr.reduce((acc, cur, i) => {
+// acc[i] = cur;
+// return acc;
+// }, {});console.log(obj);
+
+
+// reduceRight() — O'ngdan chapga reduce
+// reduce() ning o'ngdan chapga ishlaydigan versiyasi
+
+
+// const m = [[1,2],[3,4],[4,5]]
+// const n = m.reduceRight((elm,index)=>(elm.concat(index)),[])
+// console.log(n);
+
+// every() — Hammasi shartga mosmi?
+// Barcha elementlar shartga mos bo'lsa true, aks holda false qaytaradi
+
+//  const numbers = [ 2, 4, 6, 8];
+//  const n = numbers.every(n => n % 2 === 0)
+//  console.log(n);
+ 
+// some() — Kamida bittasi shartga mosmi?
+// Kamida bitta element shartga mos bo'lsa true qaytaradi
+
+//  const numbers = [ 1,2,3,4,5];
+//  const n = numbers.some(n => n % 2 === 0)
+//  console.log(n);
+ 
+
+
+
+//  Tartiblash Metodlari ------>
+
+
+//sort() — Tartiblash
+//Massivni o'z joyida tartiblaydi (asl massivni o'zgartiradi). Default holda elementlarni string sifatida
+//solishtiradi.
+
+
+// const meva = ['d,','a,','b','c']
+// meva.sort()
+// console.log(meva);
+
+// const numbers = [ 6,3,4,2,5,7,99,4];
+// numbers.sort((a,b) => b - a)
+// console.log(numbers);
+
+// console.log(meva);
+
+
+// reverse() — Teskari tartib
+// Massiv elementlari tartibini teskarisiga o'zgartiradi (asl massivni o'zgartiradi)
+
+// const arr = [1, 2, 3, 4, 5];
+// arr.reverse()
+// console.log(arr);
+
+// toSorted() — Yangi tartiblangan massiv (ES2023)
+// sort() ga o'xshash, lekin asl massivni o'zgartirmaydi — yangi massiv qaytaradi
+
+// const meva = ['d,','a,','b','c']
+// const mevaa = meva.toSorted()
+// console.log(mevaa)
+// console.log(meva);
+// ;
+
+
+// toReversed() — Yangi teskari massiv (ES2023)
+// reverse() ga o'xshash, lekin asl massivni o'zgartirmaydi
+
+// const arr = [1, 2, 3, 4, 5];
+// const a = arr.toReversed()
+// console.log(a);
+// console.log(arr);
+
+
+
+
+//  Kesish va Birlashtirish Metodlari
+
+// slice() — Kesib olish
+// Massivning bir qismini yangi massiv sifatida qaytaradi. Asl massiv o'zgarmaydi
+
+// const arr = [1, 2, 3, 4, 5];
+// const m = arr.slice(1,4)
+// console.log(m);
+
+// concat() — Birlashtirish
+// Ikki yoki undan ko'p massivlarni birlashtiradi, yangi massiv qaytaradi
+
+// const user = [
+// {id: 1, name: 'Ali', yosh: 25},
+// {id: 2, name: 'Vali', yosh: 30},
+// {id: 3, name: 'Hasan', yosh: 22},
+// ];
+//  const users = [{name:'Asta',age:15},{name:'Luffy',age:17},{name:"Kirito",age:18},{name:'Asadbek',age:16}];
+// const save = user.concat(users)
+// console.log(save);
+
+    // flat() — Ichki massivlarni yoyish
+    // Ichma-ich massivlarni berilgan chuqurlikka ko'ra tekislashtiradi.
+
+// const arr = [1, [2, 3], [4, [5, 6]]];
+// const n = arr.flat(2)
+// console.log(n);
+
+
+// flatMap() — map + flat
+// Har bir elementga map() bajarib, natijani 1 daraja tekislashtiradi.
+
+// const m = [1,2,3]
+// const n = m.flatMap(n => [n,n * 2])
+// console.log(n);
+
+
+// join() — Massivni stringga aylantirish
+
+const arr = ['Ali', 'Vali', 'Hasan'];
+const name = arr.join(' ')
+console.log(name);
+
