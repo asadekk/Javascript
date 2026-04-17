@@ -303,7 +303,76 @@
 
 // join() — Massivni stringga aylantirish
 
-const arr = ['Ali', 'Vali', 'Hasan'];
-const name = arr.join(' ')
-console.log(name);
+// const arr = ['Ali', 'Vali', 'Hasan'];
+// const name = arr.join(' ')
+// console.log(name);
 
+
+
+// O'zgartirish Metodlari-------->
+
+
+// copyWithin() — Ichida nusxalash
+// Massiv ichidagi elementlarni boshqa joyga ko'chiradi (asl massivni o'zgartiradi)
+
+
+// with() — Bitta elementni almashtirish (ES2023)
+// Berilgan indeksdagi elementni yangi qiymat bilan almashtirib yangi massiv qaytaradi
+
+// const m = [1,2,3,4,5,6,7,8,9]
+// const n = m.with(4,0)
+// console.log(n);
+
+
+
+// toSpliced() — Yangi splice (ES2023)
+// splice() ga o'xshash, lekin asl massivni o'zgartirmaydi
+
+
+// const arr = [1, 2, 3, 4, 5]
+// const n = arr.toSpliced(2,2,10)
+// console.log(n);
+
+
+//  Konvertatsiya va Boshqa Metodlar------->
+
+
+// at() — Indeks bo'yicha element (ES2022)
+// Berilgan indeksdagi elementni qaytaradi. Manfiy indekslarni qo'llab-quvvatlaydi
+
+
+// const arr = [1, 2, 3, 4, 5];
+// const n = arr.at(-2)
+// console.log(n);
+
+
+// keys() — Indekslar iteratori
+// Massiv indekslarining iteratorini qaytaradi
+
+
+// values() — Qiymatlar iteratori
+// Massiv qiymatlarining iteratorini qaytaradi
+
+
+// entries() — Indeks-qiymat juftliklari
+// [indeks, qiymat] juftliklarining iteratorini qaytaradi.
+
+// const arr = ['olma', 'banan', 'nok'];
+// for (const [i, val] of arr.entries()) {
+// console.log(`${i}: ${val}`);
+// }
+
+
+
+
+// toString() va toLocaleString()
+// Massivni string ko'rinishiga o'tkazadi
+
+// const arr = [1, 2, 3, 4, 5]
+// const n = arr.toString()
+// console.log(n);
+
+
+// const prices = [1000, 2000];
+// const n = prices.toLocaleString('uz-UZ', {style: 'currency', currency: 'UZS'});
+// console.log(n);
