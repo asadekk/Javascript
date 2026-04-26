@@ -1,56 +1,38 @@
-
-
-    let users = []
-
-    
-
-    let step = true
-    while(step){
-
-        let action1 = prompt (" 1.User qo'shish \n 2.O'chirish \n 3.Yangilash \n 0.Chiqish")
-        
-
+   let users = [];
+   let step1 = true;
+   while (step1) {
+    let action1 = prompt(" 1.Users qoshish \n 2.Delete users \n 3.Users yangilash\n 0.Exit")
     if( action1 === "1"){
-
-        let ism = prompt ("Ism --->")
-        let yosh = prompt ("Yosh --->")
-        let tel = prompt ("Telfon raqam --->")
-        let parol = prompt ("PASSWORD")
-
-
+        let ism = prompt("Ism ...")
+        let parol = prompt("Parol...")
         let user = {
             name:ism,
-            age:yosh,
-            phone:tel,
-            password:parol
+            password:parol,
         }
         users.push(user)
     }else if(action1 === "2"){
-        let str = "";
-        users.forEach((user,index) => {
-            str += index + 1 + " " + user.name + "\n"
+        let str = " ";
+        users.forEach((user , index) =>{
+            str += index + 1 + ' ' + user.name + '\n'
         })
-        let deletUsera = prompt(str)
-        delete users[deletUsera - 1]
+        let deleteUser = prompt(str)
+        delete users [ deleteUser - 1]
     }else if(action1 === "3"){
-         let str = "";
-        users.forEach((user,index) => {
-            str += index + 1 + " " + user.name + "\n"
+        let str = " ";
+        users.forEach((user , index) =>{
+            str += index + 1 + ' ' + user.name + '\n'
         })
-        let yangiUser = prompt(str)
+        let yangilashUser = prompt(str)
 
-            let ism = prompt ("Ism --->")
-            let yosh = prompt ("Yosh --->")
-            let tel = prompt ("Telfon raqam --->")
-            let parol = prompt ("PASSWORD")
+        let ism = prompt("Ism ...")
+        let parol = prompt("Parol...")
 
-            users[yangiUser-1].name = ism;
-            users[yangiUser-1].age = yosh;
-            users[yangiUser-1].phone = parol;
-            users[yangiUser-1].password = parol;
-        }else{
-        step = false
+        users [yangilashUser - 1].name = ism;
+        users [yangilashUser - 1].password = parol
+    }else{
+        step1 = false
     }
+   }
+   console.log(users);
+   
 
-    }
-    console.log(users);
