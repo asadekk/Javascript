@@ -1,22 +1,26 @@
 
-let yumaloq = document.querySelector('div')
 
-let progress = 1;
-function clickS() {
-    if(progress === 1){
-     yumaloq.style.backgroundColor='green'
-     progress = 2
-    }else if(progress === 2){
-     yumaloq.style.backgroundColor='black'
-     progress = 3
-    }else if(progress === 3){
-        yumaloq.style.backgroundColor = 'red'
-        progress = 1
-    }
-}
 
-yumaloq.addEventListener("click", clickS)
-console.log(progress);
+
+
+// let yumaloq = document.querySelector('div')
+
+// let progress = 1;
+// function clickS() {
+//     if(progress === 1){
+//      yumaloq.style.backgroundColor='green'
+//      progress = 2
+//     }else if(progress === 2){
+//      yumaloq.style.backgroundColor='black'
+//      progress = 3
+//     }else if(progress === 3){
+//         yumaloq.style.backgroundColor = 'red'
+//         progress = 1
+//     }
+// }
+
+// yumaloq.addEventListener("click", clickS)
+// console.log(progress);
 
 
 

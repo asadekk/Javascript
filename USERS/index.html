@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+      <div>
+        <input id="ism" type="text" placeholder="Ism kiriting">
+        <br>
+        <br> 
+        <input id="tel" type="text" placeholder="Telfon raqam kiriting">
+        <br>
+        <br>
+        <button id="save">Saqlash</button>          
+    </div>
+     
+    <div>
+        <table border="1">
+            <thead>
+                <td>Ism</td>
+                <td>Telfon raqam</td>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+  </header>
+<style>
+    body{
+        background-color: rgb(216, 223, 231);
+    }
+    header{
+        display: flex;
+        width: 1300px;
+        height: 100%;
+        justify-content: center;
+        justify-content: space-around;
+        margin-top: 100px;
+    }
+    input{
+        display: flex;
+        width: 250px;
+        height: 35px;
+        border-radius: 20px;
+        text-align: center;
+        border: none;
+        background-color: rgb(245, 239, 239);
+        font-size: larger;
+        transition: 0.5s;
+    }
+    input:hover{
+        width: 260px;
+        height: 40px;
+    }
+    button{
+        width: 100px;
+        height: 40px;
+        border: none;
+        background-color: rgb(101, 228, 101);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+        border-radius: 25px;
+        color: black;
+        font-size: large;
+    }
+</style>
+<script src="main.js"></script>
+</body>
+</html>
